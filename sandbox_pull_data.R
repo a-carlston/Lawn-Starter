@@ -69,8 +69,9 @@ df <- raw_data |>
   dplyr::filter(!is.na(continent))
 
 
-
-
+df |> 
+  dplyr::select(interaction_date, continent, country, brand, category, channel, calls_offered_adjusted) |> 
+  writexl::write_xlsx(path = "00_data/test.xlsx")
 
 
 
